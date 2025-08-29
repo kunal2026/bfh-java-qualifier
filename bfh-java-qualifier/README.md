@@ -1,9 +1,9 @@
-# Bajaj Finserv Health | JAVA Qualifier — Ready Repo
+# Bajaj Finserv Health | JAVA Qualifier
 
 This repo is a **ready-to-run Spring Boot app** that completes the Qualifier flow **automatically on startup**:
 
 1. Calls **generateWebhook** to get a `webhook` URL and `accessToken` (JWT).
-2. Chooses **SQL Question** from `regNo` last two digits (odd → Q1, even → Q2).
+2. Chooses **SQL Question** from `regNo` last two digits (even → Q2 (22BAI1472)).
 3. Solves the SQL and **POSTs** the `finalQuery` JSON to the returned **webhook** using the token in the `Authorization` header.
 
 > No controller/endpoint triggers the flow; it runs via a `CommandLineRunner` at startup. Uses `RestTemplate`.
@@ -16,13 +16,10 @@ This repo is a **ready-to-run Spring Boot app** that completes the Qualifier flo
 Update `src/main/resources/application.properties`:
 
 ```properties
-app.name=Your Name
-app.regNo=REG12346
-app.email=you@example.com
+app.name=KUNAL MUKHERJEE
+app.regNo=22BAI1472
+app.email=km820366@gmail.com
 ```
-
-You can also override via environment variables:
-- `APP_NAME`, `APP_REGNO`, `APP_EMAIL`
 
 ### 2) Build
 ```bash
@@ -36,12 +33,7 @@ java -jar target/bfh-java-qualifier-1.0.0.jar
 
 ---
 
-## Files to Edit (if needed)
 
-- `SQLSolverService.java`: put your final SQL for Q1/Q2.
-- `application.properties`: your name, regNo, email.
-
-By default, **Q2** (even regNo) contains the correct SQL for the given PDF:
 
 ```sql
 SELECT 
@@ -72,11 +64,3 @@ ORDER BY
 > Sensitive values (token) are not fully logged.
 
 ---
-
-## Submission Checklist (from problem)
-
-- Public GitHub repo with code + final JAR + raw JAR link
-- Public downloadable JAR link
-- Submit the link in the Microsoft Forms
-
-Good luck!
