@@ -1,0 +1,8 @@
+com\bfh\qualifier\QualifierApplication.class
+com\bfh\qualifier\service\SQLSolverService.class
+com\bfh\qualifier\config\AppProperties.class
+com\bfh\qualifier\model\GenerateWebhookResponse.class
+com\bfh\qualifier\model\SubmitRequest.class
+com\bfh\qualifier\service\WebhookClientService.class
+com\bfh\qualifier\service\QualifierRunner.class
+com\bfh\qualifier\model\GenerateWebhookRequest.class
